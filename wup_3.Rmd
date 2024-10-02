@@ -14,7 +14,17 @@ require(tidyverse)
 require(tigerstats)
 davisdata <- read.csv(file="UCDavis.csv")
 ```
-## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
+## Our Goal is to answer this question 
+Is there a difference between the alcohol consumed between the row  
+
+##Method
+we are predict alcohol consumption based on where you sit
+
+$H_0$ there is no difference in the alcohol consumption based on where you site  
+$H_A$ there is a difference in the alcohol consumption based on where you site
+
+Alcohol is numerical and seat is categorical so we will use the Num ~ Cat file  
+
 ## you choose to sit in??
 
 ## Now with ggplot - first select the basic data
@@ -34,6 +44,8 @@ basicCN + geom_boxplot()
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
+
+Box plot show that the higher level alcohol consumption of those seated in the back and decreases as you move to the middle and front seats.  
 
 ## Numerical Summarys 
 
