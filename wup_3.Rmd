@@ -53,10 +53,24 @@ Box plot show that the higher level alcohol consumption of those seated in the b
 favstats(alcohol~Seat,data=ucdavis1)
 ```
 
-The average amount of ounces for those seated in the back are 8.5 which is higher then the middle whom consume 3.33 ounces and the front consumes 1.79.
+The average of alcohol consumption in ounces for those seated in the back is 8.5, which is higher then the average of those in the middle who's alcohol consumption was 3.33 ounces and the front had the least amount of alcohol consumption with 1.79 ounces.
 
 ## Inferential Tests
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+P Value is .000116 which is lower then .05. Thus we reject the null hypothesis. 
+
+```{r}
+plot(TukeyHSD(model1))
+```
+  
+
+The tukey show that the middle front has no difference where middle back and front back have a difference. 
+
 ## Conclusions
+We conclude the that the alcohol consumption of those who are seated in the back were higher then those who sat in the middle or front. The numerical results show the average consumption of alcohol of those in the back was 8.5 where the middle was 3.3 and the front was 1.7. The P Value is .000116 which is lower then .05. so we reject the null hypothesis as there is a difference in the alcohol consumption based on where you are seated.
 
 
