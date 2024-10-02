@@ -49,6 +49,12 @@ Box plot show that the higher level alcohol consumption of those seated in the b
 
 ## Numerical Summarys 
 
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
+
+The average amount of ounces for those seated in the back are 8.5 which is higher then the middle whom consume 3.33 ounces and the front consumes 1.79.
+
 ## Inferential Tests
 
 ## Conclusions
